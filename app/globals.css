@@ -1,0 +1,70 @@
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-fade";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-ink antialiased;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.chip {
+  @apply inline-flex items-center gap-2 rounded-full bg-stone px-4 py-2 text-sm text-ink;
+}
+
+.input-base {
+  @apply w-full rounded-full border border-stone bg-white px-5 py-3 text-sm text-ink placeholder:text-neutral-400 shadow-sm focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/10;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-black;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink px-5 py-3 text-sm font-semibold uppercase tracking-wide text-ink transition hover:bg-ink hover:text-white;
+}
+
+.card {
+  @apply rounded-2xl border border-stone bg-white shadow-soft;
+}
+
+.hero-swiper .swiper-pagination {
+  @apply absolute bottom-6 left-6 w-auto;
+}
+
+.hero-swiper .swiper-pagination-bullets {
+  @apply flex gap-2;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  @apply h-1.5 w-8 rounded-full bg-white/60 opacity-100 transition;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  @apply bg-white;
+}
+
+@screen lg {
+  .hero-swiper .swiper-pagination {
+    @apply left-10;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
